@@ -1,0 +1,41 @@
+# Datos (NO COMMIT!)
+data/raw/*
+data/processed/*
+data/predictions/*
+data/splits/*
+!data/.gitkeep
+
+# Modelos grandes
+models/artifacts/*
+models/metrics/*
+!models/.gitkeep
+
+# Logs y temporales
+logs/
+*.log
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# MLflow / Experiments
+mlruns/
+mlflow/
+lightning_logs/
+
+# OS
+.DS_Store
+Thumbs.db

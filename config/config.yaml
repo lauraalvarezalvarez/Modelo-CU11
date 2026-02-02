@@ -1,0 +1,17 @@
+project:
+  name: "cu06-deep-ensemble-aves"
+  version: "1.0.0"
+
+data:
+  raw_path: "data/raw/"
+  processed_path: "data/processed/"
+  predictions_path: "data/predictions/"
+  splits_path: "data/splits/"
+  
+model:
+  ensemble_type: "stacking"
+  base_models: ["DenseNet264", "MobileNetV2", "ResNet50"]
+  
+training:
+  epochs: 50
+  batch_size: 32
