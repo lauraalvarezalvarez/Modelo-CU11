@@ -4,12 +4,13 @@ data/processed/*
 data/predictions/*
 data/splits/*
 !data/.gitkeep
-
+data/
 # Modelos grandes
 models/artifacts/*
 models/metrics/*
 !models/.gitkeep
-
+yolo26n.pt
+yolov8s.pt
 # Logs y temporales
 logs/
 *.log
