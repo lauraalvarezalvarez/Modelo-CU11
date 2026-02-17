@@ -11,13 +11,22 @@ paths:
   processed_path: "data/processed/"
   predictions_path: "data/predictions/"
   splits_path: "data/splits/"
+  models_base: models/base
+  model_tuning_path: "models/tuning/"
 
 raw_files:
   annotations: "ava_train_v2.1.csv"
 
 
+yolo_train: models/artifacts/yolo_run
+rtdetr_train: models/artifacts/rtdetr
+
 dataset:
+  train: train/images
+  val: val/images
+  test: test/images
   name: "CBVD-5"
+  tuning_yaml: "notebooks/"
   num_classes: 5
   class_mapping:
     1: 0 # stand -> Class 0

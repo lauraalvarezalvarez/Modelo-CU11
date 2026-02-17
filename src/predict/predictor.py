@@ -29,7 +29,7 @@ def run_inference(model, source_video, output_video_path):
     # Configurar Video
     cap = cv2.VideoCapture(str(source_video))
     if not cap.isOpened():
-        raise IOError(f"❌ No se pudo abrir el video: {source_video}")
+        raise IOError(f" No se pudo abrir el video: {source_video}")
 
     w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -37,7 +37,7 @@ def run_inference(model, source_video, output_video_path):
 
     # Writer para guardar el video procesado
     video_writer = cv2.VideoWriter(
-        str(output_video_path), 
+        str(output_video_path),
         cv2.VideoWriter_fourcc(*'mp4v'),
         fps, (w, h)
     )
@@ -45,7 +45,7 @@ def run_inference(model, source_video, output_video_path):
     # Estructuras para Datos (Raw Data)
     # Diccionario: {track_id: {class_id: frames_count}}
     behavior_data = defaultdict(lambda: defaultdict(int))
-    class_names = model.names 
+    class_names = model.names
 
     frame_count = 0
     print(f" Iniciando inferencia en: {Path(source_video).name}")
@@ -85,7 +85,6 @@ def run_inference(model, source_video, output_video_path):
     print(f"\n Video guardado en: {output_video_path}")
 
     # Retornamos los datos crudos necesarios para el post-procesado
-    # Esto sería tu "y_pred"
     return behavior_data, fps, class_names
 
 def save_predictions(df_pred, out_path):

@@ -1,0 +1,10 @@
+path: ../../data/splits
+train: train/images
+val: val/images
+test: test/images
+names:
+  0: stand
+  1: lying_down
+  2: foraging
+  3: drinking_water
+  4: rumination

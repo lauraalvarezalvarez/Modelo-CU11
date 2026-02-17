@@ -6,6 +6,7 @@ data/splits/*
 !data/.gitkeep
 data/
 # Modelos grandes
+models/
 models/artifacts/*
 models/metrics/*
 !models/.gitkeep
